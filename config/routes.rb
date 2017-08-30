@@ -9,8 +9,11 @@ Rails.application.routes.draw do
   # define contest route
   get '/contest' => 'pages#contest'
   # define kitten page - will show the user a cat photo in the size of their choosing.
-  get 'kitten/:size' => 'pages#kitten'
+  get '/kitten/:size' => 'pages#kitten'
   # define kittens page - will loop 5 pictures of cats
-  get 'kittens/:size' => 'pages#kittens'
+  get '/kittens/:size' => 'pages#kittens'
+  # define a secrets page that users can only gt to if they include a secrete password in the URL
+  get '/secrets/:magic_word' => 'pages#secrets'
+
 
 end
