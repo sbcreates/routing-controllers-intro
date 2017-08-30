@@ -8,5 +8,9 @@ Rails.application.routes.draw do
   get '/about' => 'pages#about'
   # define contest route
   get '/contest' => 'pages#contest'
+  # define kitten page - will show the user a cat photo in the size of their choosing.
+  get 'kitten/:size' => 'pages#kitten'
+  # define kittens page - will loop 5 pictures of cats
+  get 'kittens/:size' => 'pages#kittens'
 
 end
