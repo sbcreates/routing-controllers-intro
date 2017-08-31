@@ -14,7 +14,8 @@ class PagesController < ApplicationController
   def contest
     flash[:notice] = "Sorry, the contest has ended"
     @header = "Contest Page"
-    redirect_to '/welcome'
+    # redirect_to '/welcome'
+    redirect_to welcome_path #<--same as above code
   end
 
   # def kitten
@@ -47,7 +48,8 @@ class PagesController < ApplicationController
     if params[:magic_word] == "kittenmittens"
       render :secrets
     else
-    redirect_to '/welcome'
+    # redirect_to '/welcome'
+    redirect_to welcome_path
     flash[:alert] = "Sorry, you're not authorized to see that page."
     end
   end

@@ -1,1 +1,23 @@
 <h2>This is the welcome page</h2>
+<p> Solo Kitty Page </p>
+<% px = 100 %>
+<% 10.times do %>
+<%= link_to "#{px}px Kitten", kitten_path(px) %>
+<% px += 100 %>
+<% end %>
+
+<br>
+<br>
+
+<p> Many Kitties Page </p>
+<% px = 100 %>
+<% 10.times do %>
+<%= link_to "#{px}px Kittens", kittens_path(px) %>
+<% px += 100 %>
+<% end %>
+
+<br>
+<br>
+
+<p> Contest! (ends <%="#{Time.now}" %>)</p>
+<%= link_to "Kitty Contest", contest_path %>
